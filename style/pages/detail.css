@@ -1,0 +1,121 @@
+.detail-wrapper {
+    margin-top: 3.875rem;
+}
+
+.detail-breadcrumbs {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    align-items: center;
+    width: fit-content;
+}
+
+.detail-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.detail-media {
+    width: 100%;
+}
+
+.detail-media__img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.detail-title {
+    margin: 1.875rem 0 0;
+    line-height: 1.25;
+}
+
+.detail-description p {
+    margin: 0.5rem 0 0;
+    font-size: 1.375rem;
+    line-height: 1.2;
+}
+
+.detail-addons {
+    display: grid;
+    gap: 0.875rem 1.375rem;
+    grid-template-areas: 'title title'
+        'checkbox1 checkbox2';
+    margin-top: 2.625rem;
+    width: fit-content;
+}
+
+.detail-addons__title {
+    grid-area: title;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.detail-checkbox:first-child {
+    grid-area: checkbox1;
+}
+
+.detail-checkbox:first-child {
+    grid-area: checkbox2;
+}
+
+.detail-composition {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.detail-composition__title {
+    margin: 3.25rem 0 0;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.detail-composition__text {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.detail-nutrition {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.detail-nutrition__title {
+    margin: 2.25rem 0 0;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.detail-nutrition__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: start;
+}
+
+.detail-nutrition__chip {
+    border: 1px solid var(--black-33-t3);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: var(--black-33-t7);
+    text-align: center;
+    background: var(--white-ff);
+    width: fit-content;
+}
+
+.detail-order-btn {
+    max-width: 27.5rem;
+    margin-top: 2.8125rem;
+    justify-self: start;
+}
+
+.detail-product-slider {
+    margin-top: 7.625rem;
+}

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yam'&'Ride</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style/normalize.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/pages/about.css" />
+  </head>
+  <body>
+    <div class="loader">
+      <img
+        src="./assets/images/logo.png"
+        alt="YAM'N RIDE"
+        class="loader__logo-img"
+      />
+    </div>
+    <div class="layout">
+      <header>
+        <div class="max-width">
+          <div class="header-left">
+            <button
+              type="button"
+              class="btn btn--icon header-menu-btn"
+              aria-label="Меню"
+            >
+              <svg
+                width="25"
+                height="19"
+                viewBox="0 0 25 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="1.5"
+                  y1="1.5"
+                  x2="23.5"
+                  y2="1.5"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="1.5"
+                  y1="9.5"
+                  x2="14.5"
+                  y2="9.5"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="1.5"
+                  y1="17.5"
+                  x2="23.5"
+                  y2="17.5"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <a href="./index.html" class="header-logo">
+            <img
+              src="./assets/images/logo.png"
+              alt="YAM'N RIDE"
+              class="logo-img"
+            />
+          </a>
+
+          <div class="header-actions">
+            <a href="tel:+79054421995" class="link header-phone"
+              >+7 (905) 442-19-95</a
+            >
+            <a
+              href="./cart.html"
+              class="btn btn--icon header-cart-btn"
+              aria-label="Корзина"
+            >
+              <svg
+                width="25"
+                height="22"
+                viewBox="0 0 25 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.742 8.45502H3.50444C2.0277 8.45502 1.06023 10.0005 1.70542 11.3288L5.27608 18.6802C5.61067 19.3691 6.30926 19.8064 7.07509 19.8064H8.742M8.742 8.45502V19.8064M8.742 8.45502H15.5528M8.742 8.45502L10.2927 2.95709C10.8475 0.99008 13.6473 1.02355 14.1549 3.00327L15.5528 8.45502M8.742 19.8064H15.5528M15.5528 19.8064H17.2513C18.0007 19.8064 18.6872 19.3875 19.0299 18.7211L22.8106 11.3697C23.4951 10.0387 22.5287 8.45502 21.032 8.45502H15.5528M15.5528 19.8064V8.45502"
+                  stroke="white"
+                  stroke-width="3"
+                />
+              </svg>
+            </a>
+            <a
+              href="./personal.html"
+              class="btn btn--icon header-profile-btn"
+              aria-label="Профиль"
+            >
+              <svg
+                width="19"
+                height="21"
+                viewBox="0 0 19 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="9.53418"
+                  cy="6.5"
+                  r="5"
+                  stroke="white"
+                  stroke-width="3"
+                />
+                <path
+                  d="M6.03419 10C4.36753 11 1.13419 14.4 1.53419 20M13.0342 10C14.3675 10.8333 17.4342 14 17.0342 20"
+                  stroke="white"
+                  stroke-width="3"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="support-form-auth">
+            <button type="button" class="btn btn--icon support-form__close">
+              <svg
+                width="21"
+                height="22"
+                viewBox="0 0 21 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.5 1.5L19 20M1.5 20L19 1.5"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+            <p class="support-form__title alt-font">Вход</p>
+            <div class="auth-forms">
+              <form class="support-form-auth__body">
+                <label class="support-form__label">
+                  Ваш телефон
+                  <input
+                    type="tel"
+                    id="auth-phone"
+                    name="phone"
+                    class="support-form__input"
+                    placeholder="+79115301290"
+                    required
+                  />
+                </label>
+                <button
+                  type="submit"
+                  class="btn btn--text support-form__submit"
+                >
+                  Получить код
+                </button>
+              </form>
+              <form class="support-form-auth__code">
+                <label class="support-form__label">
+                  Код авторизации
+                  <input
+                    type="number"
+                    id="auth-code"
+                    name="code"
+                    class="support-form__input"
+                    placeholder="7835"
+                    required
+                  />
+                </label>
+                <button
+                  type="submit"
+                  class="btn btn--text support-form__submit"
+                >
+                  Войти
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="about-page max-width">
+          <h1 class="alt-font page-title about-title text-center m-0">
+            YAM’N’RIDE: Больше, чем доставка. Энергия Петербурга в каждой
+            коробке!
+          </h1>
+
+          <div class="about-block about-main row align-items-center">
+            <div class="col-6">
+              <p class="about-text">
+                Всем знакомо это чувство. Поздний вечер в&nbsp;Петербурге,
+                за&nbsp;окном моросит дождь, горит неон вывесок,
+                а&nbsp;ты&nbsp;дома после долгого дня. Или&nbsp;же
+                наоборот&nbsp;&mdash; собралась шумная компания друзей,
+                и&nbsp;не&nbsp;хватает только одного&nbsp;&mdash; по-настоящему
+                вкусной еды. Именно в&nbsp;такой момент и&nbsp;рождалась наша
+                история. В&nbsp;2018 году трое друзей, заказав очередную
+                безвкусную пиццу, поняли: в&nbsp;городе, который никогда
+                не&nbsp;спит, нет сервиса доставки, который&nbsp;бы чувствовал
+                его ритм. Доставки не&nbsp;было быстрой, вкусной
+                и&nbsp;по-настоящему &laquo;своей&raquo;. Так появился
+                YAM&rsquo;N&rsquo;RIDE.
+              </p>
+            </div>
+            <div class="col-6">
+              <figure class="about-image m-0 w-100">
+                <img
+                  src="./assets/images/about-1.jpg"
+                  alt="О компании"
+                  class="w-100 d-block h-auto"
+                />
+              </figure>
+            </div>
+          </div>
+          <h2 class="about-heading text-center lh-sm alt-font">
+            Название «YAM’N’RIDE» — это наша философия.
+          </h2>
+          <div class="about-big">
+            <div class="about-block row align-items-center flex-row-reverse">
+              <div class="col-6">
+                <p class="about-text">
+                  YAM (сленг. &laquo;вкусняшка&raquo;)&nbsp;&mdash; это про ваше
+                  удовольствие, про ту&nbsp;самую еду, от&nbsp;которой говорят
+                  &laquo;ммм, как вкусно!&raquo;.
+                </p>
+              </div>
+              <div class="col-6">
+                <figure class="about-image m-0 w-100">
+                  <img
+                    src="./assets/images/about-2.jpg"
+                    alt="О компании"
+                    class="w-100 d-block h-auto"
+                  />
+                </figure>
+              </div>
+            </div>
+            <div class="about-block row align-items-center">
+              <div class="col-6">
+                <p class="about-text">
+                  RIDE (сленг. &laquo;Поездка&raquo;,
+                  &laquo;движение&raquo;)&nbsp;&mdash; это про нашу скорость
+                  и&nbsp;динамику. Мы&nbsp;не&nbsp;просто &laquo;возим&raquo;,
+                  мы&nbsp;мчимся по&nbsp;улицам Петербурга, чтобы ваша еда
+                  прибыла к&nbsp;вам горячей и&nbsp;свежей, как будто только что
+                  из&nbsp;печи или с&nbsp;гриля.
+                </p>
+              </div>
+              <div class="col-6">
+                <figure class="about-image m-0 w-100">
+                  <img
+                    src="./assets/images/about-3.jpg"
+                    alt="О компании"
+                    class="w-100 d-block h-auto"
+                  />
+                </figure>
+              </div>
+            </div>
+            <div class="about-block row align-items-center flex-row-reverse">
+              <div class="col-6">
+                <p class="about-text">
+                  Сначала это была одна маленькая пиццерия в&nbsp;центре города
+                  и&nbsp;несколько курьеров на&nbsp;велосипедах. Но&nbsp;слово
+                  разнеслось быстро. Нас полюбили за&nbsp;сочную пиццу
+                  с&nbsp;хрустящим бортиком, за&nbsp;огромные бургеры
+                  с&nbsp;идеальными пропорциями и&nbsp;за&nbsp;то, что
+                  мы&nbsp;всегда держим слово. Сегодня
+                  YAM&rsquo;N&rsquo;RIDE&nbsp;&mdash; это большая команда
+                  единомышленников: поваров-фанатов своего дела, которые
+                  не&nbsp;экономят на&nbsp;начинке, и&nbsp;операторов, которые
+                  всегда подскажут и&nbsp;помогут.
+                </p>
+              </div>
+              <div class="col-6">
+                <figure class="about-image m-0 w-100">
+                  <img
+                    src="./assets/images/about-4.jpg"
+                    alt="О компании"
+                    class="w-100 d-block h-auto"
+                  />
+                </figure>
+              </div>
+            </div>
+            <div class="about-block row align-items-center">
+              <div class="col-6">
+                <p class="about-text">
+                  Мы&nbsp;не&nbsp;просто доставляем еду. Мы&nbsp;доставляем
+                  эмоции. Эмоцию от&nbsp;долгожданного ужина после трудного дня.
+                  Радость от&nbsp;встречи с&nbsp;друзьями. Удовольствие
+                  от&nbsp;простого, но&nbsp;такого важного момента&nbsp;&mdash;
+                  вкусно поесть, не&nbsp;выходя из&nbsp;дома.
+                </p>
+              </div>
+              <div class="col-6">
+                <figure class="about-image m-0 w-100">
+                  <img
+                    src="./assets/images/about-5.jpg"
+                    alt="О компании"
+                    class="w-100 d-block h-auto"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <h2 class="about-heading alt-font lh-sm text-center">
+            Спасибо, что выбираете нас. Спасибо, что остаетесь с нами. Приятного
+            аппетита!
+          </h2>
+        </section>
+      </main>
+
+      <footer>
+        <div class="max-width">
+          <div class="footer-left">
+            <a href="./index.html" class="footer-logo">
+              <img
+                src="./assets/images/logo.png"
+                alt="YAM'N RIDE"
+                class="logo-img"
+              />
+            </a>
+          </div>
+
+          <div class="footer-center">
+            <nav class="footer-nav">
+              <ul class="footer-nav-column">
+                <li>
+                  <a href="./category.html" class="link footer-nav-link"
+                    >Пицца</a
+                  >
+                </li>
+                <li>
+                  <a href="./category.html" class="link footer-nav-link"
+                    >Роллы</a
+                  >
+                </li>
+                <li>
+                  <a href="./category.html" class="link footer-nav-link"
+                    >Бургеры</a
+                  >
+                </li>
+                <li>
+                  <a href="./category.html" class="link footer-nav-link"
+                    >Напитки</a
+                  >
+                </li>
+                <li>
+                  <a href="./category.html" class="link footer-nav-link"
+                    >Десерты</a
+                  >
+                </li>
+              </ul>
+              <ul class="footer-nav-column">
+                <li>
+                  <a href="./about.html" class="link footer-nav-link">О нас</a>
+                </li>
+                <li>
+                  <a href="./contacts.html" class="link footer-nav-link"
+                    >Контакты</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-right">
+            <button type="button" class="btn btn--text question__btn">
+              Задать вопрос
+            </button>
+          </div>
+        </div>
+      </footer>
+
+      <div class="overlay modal-menu__overlay">
+        <div class="modal-menu">
+          <div>
+            <button type="button" class="btn btn--icon modal-menu__close">
+              <svg
+                width="21"
+                height="22"
+                viewBox="0 0 21 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.5 1.5L19 20M1.5 20L19 1.5"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+            <img
+              src="./assets/images/logo.png"
+              alt="YAM'N RIDE"
+              class="modal-menu__logo-img"
+            />
+            <p class="modal-menu__title alt-font">Меню</p>
+            <nav>
+              <ul class="modal-menu__list">
+                <li><a href="./category.html" class="link">Пицца</a></li>
+                <li><a href="./category.html" class="link">Роллы</a></li>
+                <li><a href="./category.html" class="link">Бургеры</a></li>
+                <li><a href="./category.html" class="link">Напитки</a></li>
+                <li><a href="./category.html" class="link">Десерты</a></li>
+              </ul>
+              <ul class="modal-menu__list">
+                <li><a href="./about.html" class="link">О нас</a></li>
+                <li><a href="./contacts.html" class="link">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <button
+            type="button"
+            class="btn btn--text modal-menu__question-btn question__btn"
+          >
+            Задать вопрос
+          </button>
+        </div>
+      </div>
+      <div class="overlay support-form__overlay">
+        <div class="support-form">
+          <button type="button" class="btn btn--icon support-form__close">
+            <svg
+              width="21"
+              height="22"
+              viewBox="0 0 21 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.5 1.5L19 20M1.5 20L19 1.5"
+                stroke="white"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+          <p class="support-form__title alt-font">
+            Задайте вопрос техподдержке
+          </p>
+          <form class="support-form__body">
+            <label class="support-form__label">
+              Ваше имя
+              <input
+                type="text"
+                id="support-name"
+                name="name"
+                class="support-form__input"
+                placeholder="Иван"
+                required
+              />
+            </label>
+            <label class="support-form__label">
+              Ваш телефон
+              <input
+                type="tel"
+                id="support-phone"
+                name="phone"
+                class="support-form__input"
+                placeholder="+79115301290"
+                required
+              />
+            </label>
+            <label class="support-form__label">
+              Ваш вопрос
+              <textarea
+                id="support-question"
+                name="question"
+                class="support-form__textarea"
+              ></textarea>
+            </label>
+            <button type="submit" class="btn btn--text support-form__submit">
+              ОТПРАВИТЬ
+            </button>
+          </form>
+          <div class="support-from__success">
+            <p class="alt-font">Ваше обращение принято</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
+    <script src="./script/index.js"></script>
+  </body>
+</html>

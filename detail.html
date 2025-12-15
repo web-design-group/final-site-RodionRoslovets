@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пицца | Yam'&'Ride</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./style/normalize.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/pages/detail.css" />
+  </head>
+  <body>
+    <div class="loader">
+      <img
+        src="./assets/images/logo.png"
+        alt="YAM'N RIDE"
+        class="loader__logo-img"
+      />
+    </div>
+    <div class="layout">
+      <header>
+        <div class="max-width">
+          <div class="header-left">
+            <button
+              type="button"
+              class="btn btn--icon header-menu-btn"
+              aria-label="Меню"
+            >
+              <svg
+                width="25"
+                height="19"
+                viewBox="0 0 25 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="1.5"
+                  y1="1.5"
+                  x2="23.5"
+                  y2="1.5"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="1.5"
+                  y1="9.5"
+                  x2="14.5"
+                  y2="9.5"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="1.5"
+                  y1="17.5"
+                  x2="23.5"
+                  y2="17.5"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <a href="./index.html" class="header-logo">
+            <img
+              src="./assets/images/logo.png"
+              alt="YAM'N RIDE"
+              class="logo-img"
+            />
+          </a>
+
+          <div class="header-actions">
+            <a href="tel:+79054421995" class="link header-phone"
+              >+7 (905) 442-19-95</a
+            >
+            <a
+              href="./cart.html"
+              class="btn btn--icon header-cart-btn"
+              aria-label="Корзина"
+            >
+              <svg
+                width="25"
+                height="22"
+                viewBox="0 0 25 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.742 8.45502H3.50444C2.0277 8.45502 1.06023 10.0005 1.70542 11.3288L5.27608 18.6802C5.61067 19.3691 6.30926 19.8064 7.07509 19.8064H8.742M8.742 8.45502V19.8064M8.742 8.45502H15.5528M8.742 8.45502L10.2927 2.95709C10.8475 0.99008 13.6473 1.02355 14.1549 3.00327L15.5528 8.45502M8.742 19.8064H15.5528M15.5528 19.8064H17.2513C18.0007 19.8064 18.6872 19.3875 19.0299 18.7211L22.8106 11.3697C23.4951 10.0387 22.5287 8.45502 21.032 8.45502H15.5528M15.5528 19.8064V8.45502"
+                  stroke="white"
+                  stroke-width="3"
+                />
+              </svg>
+            </a>
+            <a
+              href="./personal.html"
+              class="btn btn--icon header-profile-btn"
+              aria-label="Профиль"
+            >
+              <svg
+                width="19"
+                height="21"
+                viewBox="0 0 19 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="9.53418"
+                  cy="6.5"
+                  r="5"
+                  stroke="white"
+                  stroke-width="3"
+                />
+                <path
+                  d="M6.03419 10C4.36753 11 1.13419 14.4 1.53419 20M13.0342 10C14.3675 10.8333 17.4342 14 17.0342 20"
+                  stroke="white"
+                  stroke-width="3"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="support-form-auth">
+            <button type="button" class="btn btn--icon support-form__close">
+              <svg
+                width="21"
+                height="22"
+                viewBox="0 0 21 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.5 1.5L19 20M1.5 20L19 1.5"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+            <p class="support-form__title alt-font">Вход</p>
+            <div class="auth-forms">
+              <form class="support-form-auth__body">
+                <label class="support-form__label">
+                  Ваш телефон
+                  <input
+                    type="tel"
+                    id="auth-phone"
+                    name="phone"
+                    class="support-form__input"
+                    placeholder="+79115301290"
+                    required
+                  />
+                </label>
+                <button
+                  type="submit"
+                  class="btn btn--text support-form__submit"
+                >
+                  Получить код
+                </button>
+              </form>
+              <form class="support-form-auth__code">
+                <label class="support-form__label">
+                  Код авторизации
+                  <input
+                    type="number"
+                    id="auth-code"
+                    name="code"
+                    class="support-form__input"
+                    placeholder="7835"
+                    required
+                  />
+                </label>
+                <button
+                  type="submit"
+                  class="btn btn--text support-form__submit"
+                >
+                  Войти
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="detail-wrapper max-width">
+          <div class="detail-layout">
+            <div class="detail-media swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/detail-1.jpg"
+                    alt="Пицца Пепперони"
+                    class="detail-media__img"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/detail-2.jpg"
+                    alt="Пицца Пепперони"
+                    class="detail-media__img"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/images/detail-3.jpg"
+                    alt="Пицца Пепперони"
+                    class="detail-media__img"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-info">
+              <nav class="detail-breadcrumbs">
+                <a href="./index.html" class="link detail-breadcrumbs__link"
+                  >Главная</a
+                >
+                <span>/</span>
+                <a href="./category.html" class="link detail-breadcrumbs__link"
+                  >Пицца</a
+                >
+                <span>/</span>
+                <span class="detail-breadcrumbs__current">Пицца Пепперони</span>
+              </nav>
+              <h1 class="detail-title alt-font page-title">Пицца Пепперони</h1>
+              <div class="detail-description">
+                <p>
+                  Почувствуйте вкус настоящей классики! Наша пицца
+                  &laquo;Пепперони&raquo;&nbsp;&mdash; это больше, чем просто
+                  еда. Это воплощение страсти к&nbsp;итальянской кухне
+                  в&nbsp;ее&nbsp;самом ярком проявлении. Мы&nbsp;используем
+                  только отборную острую салями Пепперони, которая в&nbsp;печи
+                  раскрывает весь свой пикантный букет и&nbsp;покрывается
+                  румяными &laquo;лодочками&raquo; с&nbsp;ароматным маслом. Вся
+                  эта мясистая роскошь утопает в&nbsp;толстом слое нежнейшего
+                  сыра Моцареллы, который тянется от&nbsp;края до&nbsp;края.
+                  Закажите эту пиццу&nbsp;&mdash; и&nbsp;вы&nbsp;поймете, почему
+                  она уже много лет остается бессменным лидером по&nbsp;всему
+                  миру.
+                </p>
+              </div>
+
+              <div class="detail-addons">
+                <p class="detail-addons__title">Добавить к товару</p>
+                <label class="detail-checkbox checkbox">
+                  <input type="checkbox" name="addons" value="pepperoni" />
+                  <span class="checkbox-mask">
+                    <svg
+                      width="19"
+                      height="20"
+                      viewBox="0 0 19 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.50024 6.00039C4.50024 6.50039 6.80794 6.00039 8.50024 17.0004C9.50024 23.5004 8.50024 4.00039 17.0002 1.50039"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>
+                  <span>Пепперони</span>
+                </label>
+                <label class="detail-checkbox checkbox">
+                  <input type="checkbox" name="addons" value="cheese" />
+                  <span class="checkbox-mask">
+                    <svg
+                      width="19"
+                      height="20"
+                      viewBox="0 0 19 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.50024 6.00039C4.50024 6.50039 6.80794 6.00039 8.50024 17.0004C9.50024 23.5004 8.50024 4.00039 17.0002 1.50039"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>
+                  <span>Сыр</span>
+                </label>
+              </div>
+
+              <div class="detail-composition">
+                <p class="detail-composition__title">Состав</p>
+                <p class="detail-composition__text">
+                  Основа, Соус томатный, Сыр моцарелла, Колбаса пепперони
+                </p>
+              </div>
+
+              <div class="detail-nutrition">
+                <p class="detail-nutrition__title">
+                  Энергетическая ценность (на 100 гр.)
+                </p>
+                <ul class="detail-nutrition__list">
+                  <li class="detail-nutrition__chip">192,14 ккал.</li>
+                  <li class="detail-nutrition__chip">Белки: 9,14 г</li>
+                  <li class="detail-nutrition__chip">Жиры: 7,63 г</li>
+                  <li class="detail-nutrition__chip">Углеводы: 21,71 г</li>
+                  <li class="detail-nutrition__chip">Вес: 500 гр.</li>
+                </ul>
+              </div>
+
+              <button type="button" class="btn btn--text detail-order-btn">
+                ДОБАВИТЬ В КОРЗИНУ
+              </button>
+            </div>
+          </div>
+        </section>
+        <section
+          class="product-slider__wrapper detail-product-slider max-width"
+        >
+          <div class="product-slider__top">
+            <h3 class="product-slider__title alt-font">Добавить еще</h3>
+
+            <div class="product-slider__controls">
+              <button
+                type="button"
+                class="btn btn--icon product-slider__btn product-slider__btn--prev"
+              >
+                <svg
+                  width="16"
+                  height="18"
+                  viewBox="0 0 16 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.5281 16.5002L1.75004 9.70013C1.42308 9.51136 1.41527 9.04222 1.73576 8.84267L13.5281 1.50018"
+                    stroke="white"
+                    stroke-width="3"
+                    stroke-miterlimit="2.06267"
+                    stroke-linecap="round"
+                  />
+                </svg></button
+              ><button
+                type="button"
+                class="btn btn--icon product-slider__btn product-slider__btn--next"
+              >
+                <svg
+                  width="16"
+                  height="18"
+                  viewBox="0 0 16 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.5281 16.5002L1.75004 9.70013C1.42308 9.51136 1.41527 9.04222 1.73576 8.84267L13.5281 1.50018"
+                    stroke="white"
+                    stroke-width="3"
+                    stroke-miterlimit="2.06267"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="swiper product-slider product-slider--main-top">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <a href="./detail.html">
+                    <div class="product-card__image">
+                      <img src="./assets/images/pizza-1.png" alt="Пепперони" />
+                    </div>
+                  </a>
+                  <div class="product-card__info">
+                    <div>
+                      <a href="./detail.html"
+                        ><h3 class="product-card__title alt-font">Пепперони</h3>
+                        <div class="product-card__details">
+                          <span class="product-card__price">630 ₽</span>
+                          <span class="product-card__weight">720гр</span>
+                        </div></a
+                      >
+
+                      <button
+                        type="button"
+                        class="btn btn--text product-card__btn"
+                      >
+                        в корзину
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <a href="./detail.html">
+                    <div class="product-card__image">
+                      <img
+                        src="./assets/images/pizza-2.png"
+                        alt="Сицилия"
+                      /></div
+                  ></a>
+                  <div class="product-card__info">
+                    <a href="./detail.html">
+                      <h3 class="product-card__title alt-font">Сицилия</h3>
+                      <div class="product-card__details">
+                        <span class="product-card__price">670 ₽</span>
+                        <span class="product-card__weight">720гр</span>
+                      </div>
+                    </a>
+                    <button
+                      type="button"
+                      class="btn btn--text product-card__btn"
+                    >
+                      в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <a href="./detail.html">
+                    <div class="product-card__image">
+                      <img
+                        src="./assets/images/pizza-3.png"
+                        alt="Баварская"
+                      /></div
+                  ></a>
+                  <div class="product-card__info">
+                    <a href="./detail.html">
+                      <h3 class="product-card__title alt-font">Баварская</h3>
+                      <div class="product-card__details">
+                        <span class="product-card__price">670 ₽</span>
+                        <span class="product-card__weight">720гр</span>
+                      </div>
+                    </a>
+                    <button
+                      type="button"
+                      class="btn btn--text product-card__btn"
+                    >
+                      в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <a href="./detail.html">
+                    <div class="product-card__image">
+                      <img
+                        src="./assets/images/pizza-4.png"
+                        alt="Маргарита"
+                      /></div
+                  ></a>
+                  <div class="product-card__info">
+                    <a href="./detail.html">
+                      <h3 class="product-card__title alt-font">Маргарита</h3>
+                      <div class="product-card__details">
+                        <span class="product-card__price">540 ₽</span>
+                        <span class="product-card__weight">640гр</span>
+                      </div>
+                    </a>
+                    <button
+                      type="button"
+                      class="btn btn--text product-card__btn"
+                    >
+                      в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <a href="./detail.html">
+                    <div class="product-card__image">
+                      <img
+                        src="./assets/images/pizza-5.png"
+                        alt="Милано"
+                      /></div
+                  ></a>
+                  <div class="product-card__info">
+                    <a href="./detail.html">
+                      <h3 class="product-card__title alt-font">Милано</h3>
+                      <div class="product-card__details">
+                        <span class="product-card__price">700 ₽</span>
+                        <span class="product-card__weight">680гр</span>
+                      </div>
+                    </a>
+                    <button
+                      type="button"
+                      class="btn btn--text product-card__btn"
+                    >
+                      в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <a href="./detail.html">
+                    <div class="product-card__image">
+                      <img
+                        src="./assets/images/pizza-6.png"
+                        alt="Мясная"
+                      /></div
+                  ></a>
+                  <div class="product-card__info">
+                    <a href="./detail.html">
+                      <h3 class="product-card__title alt-font">Мясная</h3>
+                      <div class="product-card__details">
+                        <span class="product-card__price">750 ₽</span>
+                        <span class="product-card__weight">730гр</span>
+                      </div>
+                    </a>
+                    <button
+                      type="button"
+                      class="btn btn--text product-card__btn"
+                    >
+                      в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <a href="./detail.html">
+                    <div class="product-card__image">
+                      <img
+                        src="./assets/images/pizza-7.png"
+                        alt="Экзотическая"
+                      /></div
+                  ></a>
+                  <div class="product-card__info">
+                    <a href="./detail.html">
+                      <h3 class="product-card__title alt-font">Экзотическая</h3>
+                      <div class="product-card__details">
+                        <span class="product-card__price">710 ₽</span>
+                        <span class="product-card__weight">650гр</span>
+                      </div>
+                    </a>
+                    <button
+                      type="button"
+                      class="btn btn--text product-card__btn"
+                    >
+                      в корзину
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="max-width">
+          <div class="footer-left">
+            <a href="./index.html" class="footer-logo">
+              <img
+                src="./assets/images/logo.png"
+                alt="YAM'N RIDE"
+                class="logo-img"
+              />
+            </a>
+          </div>
+
+          <div class="footer-center">
+            <nav class="footer-nav">
+              <ul class="footer-nav-column">
+                <li>
+                  <a href="./category.html" class="link footer-nav-link"
+                    >Пицца</a
+                  >
+                </li>
+                <li>
+                  <a href="./category.html" class="link footer-nav-link"
+                    >Роллы</a
+                  >
+                </li>
+                <li>
+                  <a href="./category.html" class="link footer-nav-link"
+                    >Бургеры</a
+                  >
+                </li>
+                <li>
+                  <a href="./category.html" class="link footer-nav-link"
+                    >Напитки</a
+                  >
+                </li>
+                <li>
+                  <a href="./category.html" class="link footer-nav-link"
+                    >Десерты</a
+                  >
+                </li>
+              </ul>
+              <ul class="footer-nav-column">
+                <li>
+                  <a href="./about.html" class="link footer-nav-link">О нас</a>
+                </li>
+                <li>
+                  <a href="./contacts.html" class="link footer-nav-link"
+                    >Контакты</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-right">
+            <button type="button" class="btn btn--text question__btn">
+              Задать вопрос
+            </button>
+          </div>
+        </div>
+      </footer>
+
+      <div class="overlay modal-menu__overlay">
+        <div class="modal-menu">
+          <div>
+            <button type="button" class="btn btn--icon modal-menu__close">
+              <svg
+                width="21"
+                height="22"
+                viewBox="0 0 21 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.5 1.5L19 20M1.5 20L19 1.5"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+            <img
+              src="./assets/images/logo.png"
+              alt="YAM'N RIDE"
+              class="modal-menu__logo-img"
+            />
+            <p class="modal-menu__title alt-font">Меню</p>
+            <nav>
+              <ul class="modal-menu__list">
+                <li><a href="./category.html" class="link">Пицца</a></li>
+                <li><a href="./category.html" class="link">Роллы</a></li>
+                <li><a href="./category.html" class="link">Бургеры</a></li>
+                <li><a href="./category.html" class="link">Напитки</a></li>
+                <li><a href="./category.html" class="link">Десерты</a></li>
+              </ul>
+              <ul class="modal-menu__list">
+                <li><a href="./about.html" class="link">О нас</a></li>
+                <li><a href="./contacts.html" class="link">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <button
+            type="button"
+            class="btn btn--text modal-menu__question-btn question__btn"
+          >
+            Задать вопрос
+          </button>
+        </div>
+      </div>
+      <div class="overlay support-form__overlay">
+        <div class="support-form">
+          <button type="button" class="btn btn--icon support-form__close">
+            <svg
+              width="21"
+              height="22"
+              viewBox="0 0 21 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.5 1.5L19 20M1.5 20L19 1.5"
+                stroke="white"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+          <p class="support-form__title alt-font">
+            Задайте вопрос техподдержке
+          </p>
+          <form class="support-form__body">
+            <label class="support-form__label">
+              Ваше имя
+              <input
+                type="text"
+                id="support-name"
+                name="name"
+                class="support-form__input"
+                placeholder="Иван"
+                required
+              />
+            </label>
+            <label class="support-form__label">
+              Ваш телефон
+              <input
+                type="tel"
+                id="support-phone"
+                name="phone"
+                class="support-form__input"
+                placeholder="+79115301290"
+                required
+              />
+            </label>
+            <label class="support-form__label">
+              Ваш вопрос
+              <textarea
+                id="support-question"
+                name="question"
+                class="support-form__textarea"
+              ></textarea>
+            </label>
+            <button type="submit" class="btn btn--text support-form__submit">
+              ОТПРАВИТЬ
+            </button>
+          </form>
+          <div class="support-from__success">
+            <p class="alt-font">Ваше обращение принято</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
+    <script src="./script/index.js"></script>
+  </body>
+</html>

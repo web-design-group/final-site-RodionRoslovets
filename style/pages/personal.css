@@ -1,0 +1,95 @@
+.personal-page {
+    margin-top: 2.375rem;
+}
+
+.personal-page__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 1.625rem;
+}
+
+.orders__inner,
+.personal-page__data-inner {
+    width: 65.7%;
+}
+
+.personal-data-block__title {
+    font-size: 2.25rem;
+    color: var(--black-00);
+    margin: 0;
+    line-height: 1.25;
+}
+
+.personal-data-form {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.375rem;
+}
+
+.address-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.personal-data-form__submit {
+    margin-top: 1.25rem;
+}
+
+.orders-title {
+    margin-top: 3.875rem;
+    font-size: 2.25rem;
+}
+
+.orders-list {
+    margin: 1.125rem 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 2.25rem;
+}
+
+.order-item {
+    display: grid;
+    grid-template-columns: 7.1875rem 1fr;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.order-item__image {
+    width: 7.1875rem;
+    height: 7.6875rem;
+    overflow: hidden;
+}
+
+.order-item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.order-item__name {
+    font-size: 20px;
+    color: var(--black-00);
+    margin: 0;
+    line-height: 1.25;
+}
+
+.order-item__description {
+    margin-top: 0.625rem;
+    font-size: 18px;
+    color: var(--black-00);
+}
+
+.personal-data-form__success {
+    color: var(--green-06);
+    font-size: 1.25rem;
+    margin: 0;
+    display: none;
+}
+
+.personal-data-form__success--active {
+    display: block;
+}
